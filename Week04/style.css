@@ -1,0 +1,112 @@
+/* 讓元素的寬度計算包含 padding 與 border */
+* {
+  box-sizing: border-box;
+}
+
+/* 設定整個網頁的基本樣式 */
+body {
+  margin: 0;
+  color: #243447;
+  background-color: #f4f7fb;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* 設定頁首與頁尾 */
+header,
+footer {
+  padding: 24px;
+  color: white;
+  text-align: center;
+  background-color: #234e70;
+}
+
+/* 設定導覽列 */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 設定導覽列中的連結 */
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 滑鼠移到連結上時加上底線 */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 設定主要內容區域 */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 設定每個內容區塊 */
+section,
+main > div {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 設定標題 */
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  color: #234e70;
+}
+
+/* 設定段落 */
+p {
+  line-height: 1.8;
+}
+
+/* 設定一般連結 */
+a {
+  color: #1769aa;
+}
+
+/* 設定圖片 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 設定清單項目間距 */
+li {
+  margin-bottom: 8px;
+}
+
+/* 小於 600px 時套用手機版樣式 */
+@media (max-width: 600px) {
+  header,
+  footer {
+    padding: 16px;
+  }
+
+  main {
+    width: 100%;
+    padding: 16px;
+  }
+
+  section,
+  main > div {
+    padding: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
