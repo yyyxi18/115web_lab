@@ -1,10 +1,5 @@
 # Week 2：Git 基礎與版本控制
 
-## 實習成績：20%
-
-- 出席：20%
-- 作業：80%
-
 ## 本週定位
 
 Week 1 已完成 GitHub Repository 建立、Git 安裝與 clone。本週開始進入 Git 的核心操作，練習把「修改檔案」轉換成可追蹤、可回顧、可同步的版本紀錄。
@@ -361,19 +356,7 @@ git commit --amend -m "新的 commit 訊息"
 2. 建立至少兩筆有意義的 commit。
 3. 將 commit push 到 GitHub。
 4. 建立 <code>.gitignore</code>，至少包含 <code>node_modules/</code>、<code>.env</code> 與 <code>*.log</code>。
-5. 將 GitHub Repository 網址與最近兩筆 commit 的畫面或文字紀錄交給教師。
 
-建議繳交格式：
-
-~~~text
-姓名：
-學號：
-GitHub Repository：
-最近一次 commit：
-倒數第二次 commit：
-~~~
-
----
 
 ## 十二、本週重點回顧
 
