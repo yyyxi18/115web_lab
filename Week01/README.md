@@ -14,8 +14,6 @@ Teams：615630356@o365.tku.edu
 
 ## GitHub 與開發環境建立
 
-適用對象：淡江大學資訊管理學系三年級
-
 本週定位：建立整學期 Web 開發所需的 GitHub Repository 與本機工作環境。第一週先學會建立 Repository、在 C 槽建立 `Projects` 資料夾，並將 Repository clone 到本機；Git 指令會在第二週進一步介紹。
 
 ---
@@ -83,7 +81,7 @@ MVC 與 Full Stack CRUD
 
 ## 三、整學期課程規劃
 
-本學期共 18 週，其中安排 15 週實習課程。第 9 週為期中考週，第 17、18 週為教師彈性教學週，不安排實習課程。實際上課與繳交日期仍以授課教師公告為準。
+本學期共 18 週，其中安排 15 週實習課程。第 9 週為期中考週，第 17、18 週為教師彈性教學週。實際上課與繳交日期仍以授課教師公告為準。
 
 | 週 | 日期 | 課程主題 | 學習重點 | 主要實作／產出 |
 |---:|---|---|---|---|
@@ -269,9 +267,9 @@ Ctrl + `
 1. 登入 GitHub，按右上角「+」→「New repository」。
 ![GitHub 建立 Repository](https://hackmd.io/_uploads/Bk2YTTm_fe.png)
 2. Repository name 輸入：`115web_學號`，將「學號」替換成自己的學號。例如學號為 `412345678`，Repository 名稱就是 `115web_412345678`。
-![Repository 名稱設定](https://hackmd.io/_uploads/H1lrRT7ufl.png)
 3. 選擇 Public，方便課程檢查與展示；若老師另有要求，依課程規定調整。
 4. 勾選「Add a README file」，讓 Repository clone 到本機後已有基本檔案。
+![Repository 名稱設定](https://hackmd.io/_uploads/H1lrRT7ufl.png)
 5. 按下「Create repository」。
 ![建立 Repository](https://hackmd.io/_uploads/By4hATXOfe.png)
 
