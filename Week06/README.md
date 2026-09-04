@@ -39,6 +39,7 @@ TypeScript 取得元素
 
 ## 二、什麼是 DOM？
 <img width="486" height="266" alt="image" src="https://github.com/user-attachments/assets/18284ca0-a91c-4cc4-b544-0545fe96104a" />
+
 DOM 是瀏覽器將 HTML 文件轉換成的物件結構。TypeScript 或 JavaScript 可以透過 DOM：
 
 - 讀取 HTML 元素。
