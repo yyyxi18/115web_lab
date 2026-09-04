@@ -38,6 +38,7 @@ TypeScript 取得元素
 ---
 
 ## 二、什麼是 DOM？
+![Uploading image.png…]()
 
 DOM 是瀏覽器將 HTML 文件轉換成的物件結構。TypeScript 或 JavaScript 可以透過 DOM：
 
