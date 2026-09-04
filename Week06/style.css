@@ -1,0 +1,84 @@
+/* Week 6 DOM 練習的基本樣式 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #243447;
+  background-color: #f4f7fb;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+h1 {
+  color: #234e70;
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #b8c4ce;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  color: white;
+  background-color: #234e70;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #1769aa;
+}
+
+#form-message,
+#greeting {
+  color: #1769aa;
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
+

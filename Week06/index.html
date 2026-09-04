@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 6 DOM 練習</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1 id="title">DOM 互動練習</h1>
+
+    <section class="card">
+      <h2>修改文字</h2>
+      <p id="message">這段文字會被 TypeScript 修改。</p>
+      <button id="change-button" type="button">
+        修改文字
+      </button>
+    </section>
+
+    <section class="card">
+      <h2>打招呼</h2>
+      <label for="name-input">請輸入姓名</label>
+      <input id="name-input" type="text" placeholder="例如：小明">
+      <button id="greet-button" type="button">
+        打招呼
+      </button>
+      <p id="greeting"></p>
+    </section>
+
+    <section class="card">
+      <h2>我的興趣清單</h2>
+
+      <form id="interest-form">
+        <label for="interest-input">新增興趣</label>
+        <input id="interest-input" type="text" placeholder="例如：閱讀">
+        <button type="submit">新增</button>
+      </form>
+
+      <p id="form-message"></p>
+      <ul id="interest-list"></ul>
+    </section>
+  </main>
+
+  <!-- 瀏覽器執行編譯後的 JavaScript -->
+  <script src="main.js" defer></script>
+</body>
+</html>
+
