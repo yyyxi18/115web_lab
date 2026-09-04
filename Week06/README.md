@@ -40,7 +40,73 @@ TypeScript 取得元素
 ## 二、什麼是 DOM？
 <img width="486" height="266" alt="image" src="https://github.com/user-attachments/assets/18284ca0-a91c-4cc4-b544-0545fe96104a" />
 
-DOM 是瀏覽器將 HTML 文件轉換成的物件結構。TypeScript 或 JavaScript 可以透過 DOM：
+DOM 的全名是 **Document Object Model**，中文是「文件物件模型」。
+
+先不要把 DOM 想成很複雜的專有名詞，可以先記住一句話：
+
+> **瀏覽器會把 HTML 解析成一棵樹，JavaScript 再透過這棵樹操作網頁。**
+
+### 1. HTML 如何變成 DOM Tree
+
+假設我們有以下 HTML：
+
+~~~html
+<html>
+  <body>
+    <h1>Hello World</h1>
+    <p>這是一段文字。</p>
+  </body>
+</html>
+~~~
+
+瀏覽器讀取後，可以用以下方式理解它的階層：
+
+~~~text
+Document（整份文件）
+└── html
+    └── body
+        ├── h1
+        │   └── Hello World
+        └── p
+            └── 這是一段文字。
+~~~
+
+這就是 DOM Tree。樹上的每一個項目都可以視為一個 Node（節點）。
+
+### 2. DOM 中常見的節點
+
+| 節點 | 意義 | 範例 |
+|---|---|---|
+| Document | 整份 HTML 文件的起點 | `document` |
+| Element | HTML 標籤 | `<h1>`、`<p>`、`<body>` |
+| Text | 標籤裡面的文字 | `Hello World` |
+| Attribute | 標籤的屬性 | `id`、`class`、`href` |
+
+例如：
+
+~~~html
+<h1 id="title">Hello World</h1>
+~~~
+
+這段 HTML 可以拆成：
+
+- `<h1>`：Element 節點。
+- `Hello World`：Text 節點。
+- `id="title"`：Attribute 屬性。
+
+### 3. 父節點、子節點與兄弟節點
+
+在上面的 DOM Tree 中：
+
+- `body` 是 `h1` 與 `p` 的父節點。
+- `h1` 與 `p` 是 `body` 的子節點。
+- `h1` 與 `p` 在同一層，因此互相是兄弟節點。
+
+理解這些關係後，就能知道 JavaScript 是從 `document` 開始，逐步找到想操作的元素。
+
+### 4. 為什麼需要 DOM？
+
+如果沒有 DOM，JavaScript 只能在背景計算資料，無法直接找到畫面上的標題、按鈕或輸入框。有了 DOM，JavaScript 可以：
 
 - 讀取 HTML 元素。
 - 修改文字。
@@ -49,21 +115,41 @@ DOM 是瀏覽器將 HTML 文件轉換成的物件結構。TypeScript 或 JavaScr
 - 建立或刪除元素。
 - 回應按鈕、表單與滑鼠事件。
 
-例如這段 HTML：
+### 5. 第一個 DOM 操作
+
+HTML：
 
 ~~~html
 <h1 id="title">原本的標題</h1>
 ~~~
 
-可以使用 TypeScript 修改：
+TypeScript：
 
 ~~~typescript
-const title = document.querySelector("#title");
+const title = document.getElementById("title");
 
 if (title) {
   title.textContent = "新的標題";
 }
 ~~~
+
+這段程式依序做了三件事：
+
+1. 從 `document` 開始尋找 `id` 是 `title` 的元素。
+2. 將找到的元素存到 `title` 變數。
+3. 將該元素的文字從「原本的標題」改成「新的標題」。
+
+這就是 DOM 操作：**找到 HTML 元素，然後修改它。**
+
+### 6. 先練習觀察，再開始操作
+
+開啟瀏覽器的開發者工具，切換到 **Elements**，你會看到瀏覽器解析後的 HTML 結構。請試著找出：
+
+- 哪一個元素是 `body` 的子元素？
+- 哪一個元素包含文字？
+- 哪一個元素有 `id` 或 `class` 屬性？
+
+先看懂 HTML 與 DOM Tree 的對應關係，再使用 TypeScript 取得元素，後面的事件與表單操作會比較容易理解。
 
 ---
 
