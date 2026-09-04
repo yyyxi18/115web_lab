@@ -1,0 +1,26 @@
+:root {
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  color: #243447;
+  background-color: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+h2 {
+  color: #234e70;
+}
+

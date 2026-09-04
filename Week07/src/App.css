@@ -1,0 +1,150 @@
+.app {
+  width: min(92%, 960px);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  margin-bottom: 32px;
+  padding: 40px;
+  color: white;
+  background: linear-gradient(135deg, #234e70, #1769aa);
+  border-radius: 16px;
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.hero p {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+.eyebrow,
+.course-label {
+  margin: 0;
+  color: #dbeafe;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.welcome-section,
+.course-card,
+.counter {
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #dbe5ed;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(35, 78, 112, 0.08);
+}
+
+.welcome-section {
+  margin-bottom: 32px;
+}
+
+.welcome-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.welcome-section input {
+  width: min(100%, 420px);
+  padding: 12px;
+  border: 1px solid #b8c4ce;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.welcome-message {
+  color: #1769aa;
+  font-weight: bold;
+}
+
+.course-list {
+  display: flex;
+  gap: 20px;
+  margin: 16px 0 32px;
+}
+
+.course-card {
+  flex: 1;
+}
+
+.course-label {
+  color: #1769aa;
+}
+
+.course-card h3 {
+  margin-bottom: 8px;
+  color: #234e70;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.counter .eyebrow {
+  color: #1769aa;
+}
+
+.counter h2 {
+  margin: 4px 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  padding: 10px 16px;
+  color: white;
+  background-color: #234e70;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #1769aa;
+}
+
+.secondary-button {
+  color: #234e70;
+  background-color: #e5eef5;
+}
+
+.secondary-button:hover {
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .app {
+    padding: 24px 0;
+  }
+
+  .hero {
+    padding: 28px 22px;
+  }
+
+  .course-list,
+  .counter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .counter {
+    gap: 16px;
+  }
+}
+
