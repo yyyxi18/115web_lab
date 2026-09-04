@@ -2,8 +2,9 @@
   "name": "week05",
   "version": "1.0.0",
   "description": "前幾週學習了 HTML 結構、CSS 樣式與網頁版面。本週開始學習 JavaScript 與 TypeScript，讓程式能夠處理資料、做判斷、重複執行工作，並為下一週的 DOM 互動做準備。",
-  "main": "index.js",
+  "main": "hello.js",
   "scripts": {
+    "start": "node hello.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
