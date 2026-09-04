@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+  <!-- 設定中文編碼，避免中文顯示亂碼 -->
   <meta charset="UTF-8">
+  <!-- 讓網頁適應手機與不同螢幕尺寸 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 設定瀏覽器分頁標題 -->
   <title>Week 6 DOM 練習</title>
+  <!-- 載入外部 CSS 檔案 -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- main：放置這個練習頁面的主要內容 -->
   <main>
+    <!-- id 讓 TypeScript 可以找到這個標題 -->
     <h1 id="title">DOM 互動練習</h1>
 
+    <!-- 第一個練習：按鈕修改文字 -->
     <section class="card">
       <h2>修改文字</h2>
+      <!-- TypeScript 會修改這個段落的文字 -->
       <p id="message">這段文字會被 TypeScript 修改。</p>
+      <!-- type="button" 表示這不是表單送出按鈕 -->
       <button id="change-button" type="button">
         修改文字
       </button>
     </section>
 
+    <!-- 第二個練習：讀取輸入框並顯示問候語 -->
     <section class="card">
       <h2>打招呼</h2>
+      <!-- label 的 for 要對應 input 的 id -->
       <label for="name-input">請輸入姓名</label>
+      <!-- 使用者輸入的內容會由 TypeScript 讀取 -->
       <input id="name-input" type="text" placeholder="例如：小明">
+      <!-- 按下按鈕後執行打招呼事件 -->
       <button id="greet-button" type="button">
         打招呼
       </button>
       <p id="greeting"></p>
     </section>
 
+    <!-- 第三個練習：使用表單新增興趣 -->
     <section class="card">
       <h2>我的興趣清單</h2>
 
+      <!-- submit 事件會由 TypeScript 處理 -->
       <form id="interest-form">
         <label for="interest-input">新增興趣</label>
         <input id="interest-input" type="text" placeholder="例如：閱讀">
         <button type="submit">新增</button>
       </form>
 
+      <!-- 顯示表單操作結果，例如新增成功或輸入錯誤 -->
       <p id="form-message"></p>
+      <!-- TypeScript 會將興趣資料動態加入這個清單 -->
       <ul id="interest-list"></ul>
     </section>
   </main>
@@ -47,4 +64,3 @@
   <script src="main.js" defer></script>
 </body>
 </html>
-
