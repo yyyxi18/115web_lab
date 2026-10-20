@@ -44,7 +44,7 @@ HTTP、前端與後端
         ↓
 Node.js、Express 與 API
         ↓
-資料庫、MVC 與 CRUD
+Docker 容器、MongoDB、MVC 與 CRUD
         ↓
 團隊協作與期末 Web 專案
 ```
@@ -65,8 +65,8 @@ Node.js、Express 與 API
 | **7** | **10/27** | **React + TypeScript 入門** | Vite、React 專案結構、TSX、Component、Props、State | HW4：將 About Me 改寫成 React |
 | **8** | **11/3** | **React 網頁應用開發** | Component 拆分、事件、表單、List Rendering、React Router | 建立多頁式 React Application |
 | **9** | **11/10** | **期中考週** | 不上實習課 |  |
-| **10** | **11/17** | **HTTP、RESTful API 與 Express** | Request、Response、JSON、Status Code、GET、POST、PUT、DELETE、Express Route | HW5：建立自己的 REST API |
-| **11** | **11/24** | **MongoDB 與 Mongoose** | SQL / NoSQL、Database、Collection、Document、CRUD、Schema、Model | 建立 MongoDB 並由 Express 存取資料 |
+| **10** | **11/17** | **HTTP、RESTful API、Express 與 Docker 入門** | Request、Response、JSON、Status Code、GET、POST、PUT、DELETE、Express Route、Image、Container、Port Mapping | HW5：建立 REST API，並以 Docker 建立及執行 Express 容器 |
+| **11** | **11/24** | **MongoDB、Mongoose 與 Docker Compose** | SQL / NoSQL、Database、Collection、Document、CRUD、Schema、Model、Compose、Service、Volume | 以 Docker Compose 啟動 MongoDB，並由 Express／Mongoose 存取資料 |
 | **12** | **12/1** | **前後端串接** | Fetch API、Async/Await、CORS、`.env`、React 呼叫 Express API | HW6：React + Express + MongoDB 串接 |
 | **13** | **12/8** | **MVC 架構與 Full Stack CRUD** | Router、Controller、Service、Model、MVC、CRUD | 完成具備 CRUD 的小型 Web Application |
 | **14** | **12/15** | **期末專案開發 I** | 專案需求、GitHub 協作、前端 Component、API 規劃、DB Schema | 建立團隊 Repository，完成專案架構與核心功能 |
