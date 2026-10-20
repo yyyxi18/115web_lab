@@ -1,5 +1,46 @@
 # Week 8：React 網頁應用開發
 
+## 學生 API 與 Postman
+
+本週資料夾另附一個 Express 學生 API，方便練習 REST 與用 Postman 呼叫。API 使用 JSON 檔保存資料；第一次讀取時會建立範例學生資料。
+
+### 啟動後端伺服器
+
+```bash
+cd Week08/server
+npm install
+npm run dev
+```
+
+伺服器預設監聽 `3000` port，並綁定 `0.0.0.0`，同一個區域網路的同學可以連線。先在自己的瀏覽器或 Postman 開啟 `http://localhost:3000/api/health` 確認伺服器已啟動。
+
+### 匯入 Postman
+
+在 Postman 選擇 **Import**，匯入 `Week08/postman/Week08-Student-API.postman_collection.json`。自己測試時使用預設的 `http://localhost:3000`；同學要在 Collection 的變數 `baseUrl` 填入伺服器電腦的區域網路 IP，例如 `http://192.168.1.23:3000`。兩台電腦需連到同一個 Wi-Fi／區域網路，伺服器也必須保持執行。如果連不上，請確認作業系統防火牆允許 Node.js 接收區域網路連線。
+
+| Method | Path | 用途 |
+|---|---|---|
+| GET | `/api/health` | 確認伺服器狀態 |
+| GET | `/api/students` | 取得所有學生 |
+| GET | `/api/students/:id` | 取得單一學生 |
+| POST | `/api/students` | 新增學生 |
+| PUT | `/api/students/:id` | 更新學生 |
+| DELETE | `/api/students/:id` | 刪除學生 |
+
+新增與更新請使用 JSON body，例如：
+
+```json
+{
+  "name": "王小明",
+  "department": "資訊管理學系",
+  "grade": 3
+}
+```
+
+`grade` 必須是 1 到 4 的整數；欄位缺漏或格式不正確會回傳 `400`，查無學生會回傳 `404`。刪除與新增會寫入 `Week08/server/data/students.json`，伺服器重啟後資料仍會保留。
+
+> 以上設定提供同一區域網路內的同學測試。若要讓不同網路的同學透過公網呼叫，還需要將伺服器部署到雲端主機或設定對外網路；這份練習目前不會自動公開到網際網路。
+
 ## 本週定位
 
 Week 7 已學會建立 Component、使用 Props 與 State。本週將把多個元件組合成較完整的 React Application，並加入表單、事件、清單渲染與多頁導覽。
