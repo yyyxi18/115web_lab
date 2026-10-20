@@ -1,0 +1,55 @@
+{
+  "info": {
+    "name": "Week08 Student API",
+    "description": "學生資料 REST API。把 baseUrl 改成伺服器所在電腦的 IP，即可由同一個區域網路的 Postman 呼叫。",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "studentId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Health check",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/health" }
+    },
+    {
+      "name": "列出所有學生",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/students" }
+    },
+    {
+      "name": "查詢單一學生",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/students/{{studentId}}" }
+    },
+    {
+      "name": "新增學生",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"測試同學\",\n  \"department\": \"資訊管理學系\",\n  \"grade\": 2\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/api/students"
+      }
+    },
+    {
+      "name": "更新學生",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"更新後的名字\",\n  \"department\": \"資訊工程學系\",\n  \"grade\": 3\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/api/students/{{studentId}}"
+      }
+    },
+    {
+      "name": "刪除學生",
+      "request": { "method": "DELETE", "url": "{{baseUrl}}/api/students/{{studentId}}" }
+    }
+  ]
+}
